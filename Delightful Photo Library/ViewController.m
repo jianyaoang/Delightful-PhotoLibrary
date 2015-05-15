@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface ViewController () <UITextFieldDelegate>
+@interface ViewController () <UITextFieldDelegate, UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *imageSelected;
 @property (strong, nonatomic) IBOutlet UITextField *imageDescription;
 @property (strong, nonatomic) IBOutlet UILabel *textLabel;
@@ -26,6 +26,7 @@
     
     [self settingImageSelected];
     [self settingImageDescriptionTextField];
+    [self settingAssetsLibrary];
 }
 
 #pragma mark - text field 
@@ -35,6 +36,10 @@
     self.imageDescription.delegate = self;
     
     self.imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
+    self.imageScrollView.delegate = self;
+    
+    ALAssets 
+    self.imageScrollView.backgroundColor = [UIColor redColor];
     self.imageDescription.inputAccessoryView = self.imageScrollView;
 }
 
@@ -91,6 +96,11 @@
 }
 
 
+#pragma mark - touches 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
 
 
 @end
