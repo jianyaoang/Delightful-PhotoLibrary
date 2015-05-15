@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,121 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7K0-lJ-njj">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="N9b-1j-0kK">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="200"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="300" id="Nef-xm-2jh">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="200"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="N9b-1j-0kK"/>
+                                        <exclude reference="Nef-xm-2jh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="N9b-1j-0kK"/>
+                                        <include reference="Nef-xm-2jh"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePm-XT-rlz">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="AoV-aa-cwZ"/>
+                                    <constraint firstAttribute="height" constant="21" id="NX0-MC-hml"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AoV-aa-cwZ"/>
+                                        <exclude reference="NX0-MC-hml"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="AoV-aa-cwZ"/>
+                                        <include reference="NX0-MC-hml"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Image Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mcG-ab-Ucj">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ePm-XT-rlz" firstAttribute="top" secondItem="7K0-lJ-njj" secondAttribute="bottom" constant="16" id="027-qu-UQN">
+                                <variation key="heightClass=regular-widthClass=compact" constant="32"/>
+                            </constraint>
+                            <constraint firstItem="mcG-ab-Ucj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="48" id="Ayb-If-VHX"/>
+                            <constraint firstItem="7K0-lJ-njj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="50" id="Bnl-kD-X7v">
+                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="ePm-XT-rlz" secondAttribute="trailing" constant="50" id="bCf-CF-y4m"/>
+                            <constraint firstAttribute="trailing" secondItem="mcG-ab-Ucj" secondAttribute="trailing" constant="47" id="leg-C2-a6r"/>
+                            <constraint firstItem="mcG-ab-Ucj" firstAttribute="top" secondItem="ePm-XT-rlz" secondAttribute="bottom" constant="51" id="nai-EF-0C7">
+                                <variation key="heightClass=regular-widthClass=compact" constant="22"/>
+                            </constraint>
+                            <constraint firstItem="7K0-lJ-njj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="32" id="unW-lS-2Gf">
+                                <variation key="heightClass=regular-widthClass=compact" constant="34"/>
+                            </constraint>
+                            <constraint firstItem="ePm-XT-rlz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="50" id="ztY-s4-BTS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7K0-lJ-njj"/>
+                                <exclude reference="ePm-XT-rlz"/>
+                                <exclude reference="mcG-ab-Ucj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Bnl-kD-X7v"/>
+                                <exclude reference="unW-lS-2Gf"/>
+                                <exclude reference="027-qu-UQN"/>
+                                <exclude reference="bCf-CF-y4m"/>
+                                <exclude reference="ztY-s4-BTS"/>
+                                <exclude reference="Ayb-If-VHX"/>
+                                <exclude reference="leg-C2-a6r"/>
+                                <exclude reference="nai-EF-0C7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7K0-lJ-njj"/>
+                                <include reference="ePm-XT-rlz"/>
+                                <include reference="mcG-ab-Ucj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Bnl-kD-X7v"/>
+                                <include reference="unW-lS-2Gf"/>
+                                <include reference="027-qu-UQN"/>
+                                <include reference="bCf-CF-y4m"/>
+                                <include reference="ztY-s4-BTS"/>
+                                <include reference="Ayb-If-VHX"/>
+                                <include reference="leg-C2-a6r"/>
+                                <include reference="nai-EF-0C7"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageDescription" destination="mcG-ab-Ucj" id="R2S-NF-5MS"/>
+                        <outlet property="imageSelected" destination="7K0-lJ-njj" id="DKq-Uv-zJO"/>
+                        <outlet property="textLabel" destination="ePm-XT-rlz" id="c86-FC-vpB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="244.5" y="304.5"/>
         </scene>
     </scenes>
 </document>

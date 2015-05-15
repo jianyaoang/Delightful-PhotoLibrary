@@ -14,6 +14,7 @@
 		3B6F8F0A1B05CBBF006C10C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B6F8F091B05CBBF006C10C1 /* Images.xcassets */; };
 		3B6F8F0D1B05CBBF006C10C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B6F8F0B1B05CBBF006C10C1 /* LaunchScreen.xib */; };
 		3B6F8F191B05CBBF006C10C1 /* Delightful_Photo_LibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6F8F181B05CBBF006C10C1 /* Delightful_Photo_LibraryTests.m */; };
+		3B6F8F231B05CF80006C10C1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6F8F221B05CF80006C10C1 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		3B6F8F121B05CBBF006C10C1 /* Delightful Photo LibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Delightful Photo LibraryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6F8F171B05CBBF006C10C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B6F8F181B05CBBF006C10C1 /* Delightful_Photo_LibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Delightful_Photo_LibraryTests.m; sourceTree = "<group>"; };
+		3B6F8F221B05CF80006C10C1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B6F8F231B05CF80006C10C1 /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		3B6F8EF01B05CBBF006C10C1 = {
 			isa = PBXGroup;
 			children = (
+				3B6F8F221B05CF80006C10C1 /* AssetsLibrary.framework */,
 				3B6F8EFB1B05CBBF006C10C1 /* Delightful Photo Library */,
 				3B6F8F151B05CBBF006C10C1 /* Delightful Photo LibraryTests */,
 				3B6F8EFA1B05CBBF006C10C1 /* Products */,

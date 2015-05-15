@@ -2,13 +2,17 @@
 //  ViewController.m
 //  Delightful Photo Library
 //
-//  Created by VLT Labs on 5/15/15.
 //  Copyright (c) 2015 Jay Ang. All rights reserved.
 //
 
 #import "ViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UIImageView *imageSelected;
+@property (strong, nonatomic) IBOutlet UITextField *imageDescription;
+@property (strong, nonatomic) IBOutlet UILabel *textLabel;
+@property (strong, nonatomic) UIScrollView *imageScrollView;
 
 @end
 
@@ -16,12 +20,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self settingImageSelected];
+    [self settingImageDescriptionTextField];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - text field 
+-(void)settingImageDescriptionTextField
+{
+    self.imageDescription.placeholder = @"Image Description";
+    self.imageDescription.delegate = self;
+    
+    self.imageScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
+    self.imageDescription.inputAccessoryView = self.imageScrollView;
 }
+
+#pragma mark - setting Image Selected
+-(void)settingImageSelected
+{
+    self.imageSelected.image = [UIImage imageNamed:@"jlaw"];
+}
+
+
+
+
+
+
 
 @end
